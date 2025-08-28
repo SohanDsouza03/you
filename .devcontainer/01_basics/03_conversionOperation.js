@@ -11,7 +11,18 @@ let ValueInNumber= Number(score)
 //"33abc" => NAN
 // true => 1; false => 0;
 
-let isLoggedIn = 1
+let isLoggedIn = "sohan"
 
 let booleanIsLoggedIn = Boolean(isLoggedIn)
-console.log(booleanIsLoggedIn);
+//console.log(booleanIsLoggedIn);
+
+// 1=> true ;0=> false
+// "" => false
+// "sohan" => true
+
+let someNumber = 33
+let stringNumber = String(someNumber)
+console.log(stringNumber);
+console.log(typeof stringNumber);
+
+

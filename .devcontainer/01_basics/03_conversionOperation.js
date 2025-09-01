@@ -1,11 +1,11 @@
 let score = "sohan"
 
-//console.log(typeof score);
-//console.log(typeof (score));
+// console.log(typeof score);
+// console.log(typeof (score));
 
 let ValueInNumber= Number(score)
-//console.log(typeof ValueInNumber);
-//console.log( ValueInNumber);
+// console.log(typeof ValueInNumber);
+// console.log( ValueInNumber);
 
 //"33" => 33
 //"33abc" => NAN
@@ -14,7 +14,7 @@ let ValueInNumber= Number(score)
 let isLoggedIn = "sohan"
 
 let booleanIsLoggedIn = Boolean(isLoggedIn)
-//console.log(booleanIsLoggedIn);
+// console.log(booleanIsLoggedIn);
 
 // 1=> true ;0=> false
 // "" => false

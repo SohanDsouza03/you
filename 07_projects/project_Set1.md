@@ -4,7 +4,7 @@
 [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode-p8ggubhq?file=1-colorChanger%2Fchaiaurcode.js,1-colorChanger%2Findex.html)
 
 
-#solution code 
+# solution code 
 
 #project 1
 

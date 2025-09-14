@@ -6,7 +6,7 @@
 
 # solution code 
 
-#project 1
+# project 1
 
 ``` javascript
 console.log("SOHAN DSOUZA")

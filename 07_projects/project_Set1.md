@@ -180,3 +180,40 @@ function newGame() {
 
 ```
 
+## project 5 
+``` javascript
+// generate a random color
+
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let colour = '#';
+  for (let i = 0; i < 6; i++) {
+    colour += hex[Math.floor(Math.random() * 16)];
+  }
+  return colour;
+};
+// console.log(randomColor());
+let inid;
+const startChangingColor = function () {
+  inid = setInterval(changeBg, 1000);
+
+  function changeBg() {
+    document.body.style.backgroundColor = randomColor();
+  }
+  const stopcg = function () {
+    clearInterval();
+    inid = null;
+  };
+};
+
+const stopChangingColor = function () {
+  clearInterval(inid);
+};
+
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
+```
+
+

@@ -68,3 +68,17 @@ form.addEventListener('submit', function (evt) {
 });
 
 ```
+## project 3 solution code 
+
+``` javascript
+
+const clock = document.querySelector('#clock');
+
+setInterval(function () {
+  let date = new Date();
+  // console.log(date.toLocaleTimeString());  <--- this basically runs in inspect console
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
+```
+

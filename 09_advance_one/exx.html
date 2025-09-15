@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Card</title>
+  <style>
+    body {
+      background-color: #212121;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    .card {
+      background: #333;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      width: 300px;
+    }
+    .card img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      margin-bottom: 15px;
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      background: teal;
+      color: white;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: rgb(0, 186, 186);
+      color: #212121 ;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="profileCard">
+    <p>Click the button to load profile</p>
+  </div>
+  <button class="btn" id="loadBtn">Load Profile</button>
+
+  <script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+
+    document.getElementById('loadBtn').addEventListener('click', function () {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', requestUrl);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          const data = JSON.parse(this.responseText);
+
+          // Create card content dynamically
+          const card = document.getElementById('profileCard');
+          card.innerHTML = `
+            <img src="${data.avatar_url}" alt="Profile Photo">
+            <h2>${data.name}</h2>
+            <p><strong>Followers:</strong> ${data.followers}</p>
+            <p>${data.bio || "No bio available"}</p>
+          `;
+        }
+      };
+      xhr.send();
+    });
+  </script>
+
+</body>
+</html>
